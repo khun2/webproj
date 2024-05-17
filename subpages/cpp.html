@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Káli Hunor - Portfólió</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="../index.html">Főoldal</a></li>
+                <li> <a href="./cs.html">c#</a></li>
+                <li> <a href="./web.html">webfejlesztés</a></li>
+                <li> <a href="./aloldal4.html">aloldal4</a></li>
+                <li> <a href="./aloldal5.html">aloldal5</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Rólam</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem at voluptatibus, repellat explicabo quis
+            delectus nam harum adipisci vero cumque et necessitatibus excepturi sint provident ipsa! Voluptatem, iusto
+            a!
+        </p>
+        <p>
+            itt egy kis példa kód:
+        </p>
+        <pre>
+        <code class="jetbrains-mono-code-font">
+        #include <bits/stdc++.h>
+        using namespace std;
+                    
+        int main() {
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+            long long n,q,l,r;
+            long long max = 0;
+            cin >> n >> q;
+            vector<long long> v(n), cnt(n+1, 0);  
+            for (long long i = 0; i < n; i++) {
+                cin >> v[i];
+            }
+            for (long long i = 0; i < q; i++) {
+                cin >> l >> r;
+                cnt[l]++;
+                if (r+1 < n+1) cnt[r+1]--;
+            }
+            for (long long i = 1; i < cnt.size(); i++) {
+                cnt[i] += cnt[i-1];
+            }
+        
+            sort(v.rbegin(), v.rend());
+            sort(cnt.rbegin(), cnt.rend());
+
+            for (long long i = 0; i < n; i++) {   
+                max += v[i] * cnt[i];
+            }
+            cout << max;
+        }
+                    </code>
+        </pre>
+    </main>
+    <footer>
+        <p>Elérhetőség: <a href="mailto: kali.hunor.23f@szlgbp.hu">kali.hunor.23f@szlgbp.hu</a></p>
+    </footer>
 </body>
+
 </html>

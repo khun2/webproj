@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Káli Hunor - Portfólió - c#</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="../index.html">Főoldal</a></li>
+                <li> <a href="./cpp.html">c++</a></li>
+                <li> <a href="./web.html">webfejlesztés</a></li>
+                <li> <a href="./aloldal4.html">aloldal4</a></li>
+                <li> <a href="./aloldal5.html">aloldal5</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <h1>Rólam</h1>
+    <main>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum rem at voluptatibus, repellat explicabo quis
+            delectus nam harum adipisci vero cumque et necessitatibus excepturi sint provident ipsa! Voluptatem, iusto
+            a!
+        </p>
+        <p>
+            itt egy kis példa kód:
+        </p>
+        <pre>
+            <code class="jetbrains-mono-code-font">
+                static List<Telep> SizeSort(List<Telep> input, bool largest) {
+                    List<Telep> orderedList = new List<Telep>(), output = new List<Telep>();
+                        if(largest) orderedList = input.OrderBy(x => x.size).ToList(); 
+                        else orderedList = input.OrderByDescending(x => x.size).ToList();
+                        int i = 0;
+                        while (i < input.Count() && orderedList[i].size == orderedList[0].size) {
+                            output.Add(orderedList[i]);
+                            i++;
+                        }
+                        return output;
+                    }
+                </code>
+            </pre>
+    </main>
+    <footer>
+        <p>Elérhetőség: <a href="mailto: kali.hunor.23f@szlgbp.hu">kali.hunor.23f@szlgbp.hu</a></p>
+    </footer>
 </body>
+
 </html>
