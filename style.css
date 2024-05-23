@@ -43,3 +43,15 @@ code  {
     overflow: scroll;
     width: 100%;
 }
+
+#algopro {
+    width: 70%;    
+    height: 35rem;
+}
+
+.vertCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
