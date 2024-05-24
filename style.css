@@ -34,12 +34,12 @@ li a:hover {
     font-weight: 400;
     font-size: small;
     font-style: normal;
-    display: block;
     background-color: #333;
     color: whitesmoke;
 }
 
 code  {
+    display: block;
     overflow: scroll;
     width: 100%;
 }
